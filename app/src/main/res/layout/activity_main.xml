@@ -52,45 +52,46 @@
         android:id="@+id/etBaseAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="24dp"
         android:ems="8"
+        android:hint="Bill Amount"
         android:inputType="numberDecimal"
-        android:text="Bill Amount"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvBaseLabel"
         app:layout_constraintTop_toTopOf="parent" />
 
     <SeekBar
         android:id="@+id/seekBarTip"
         android:layout_width="200dp"
         android:layout_height="26dp"
-        android:layout_marginTop="53dp"
         android:max="30"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTipPercentLabel"
         app:layout_constraintStart_toStartOf="@+id/etBaseAmount"
-        app:layout_constraintTop_toBottomOf="@+id/etBaseAmount" />
+        app:layout_constraintTop_toTopOf="@+id/tvTipPercentLabel" />
 
     <TextView
         android:id="@+id/tvTipAmount"
         android:layout_width="72dp"
         android:layout_height="28dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="92dp"
         android:text="19.96"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTipLabel"
         app:layout_constraintStart_toStartOf="@+id/seekBarTip"
-        app:layout_constraintTop_toBottomOf="@+id/seekBarTip" />
+        app:layout_constraintTop_toTopOf="@+id/tvTipLabel" />
 
     <TextView
         android:id="@+id/tvTotalAmount"
         android:layout_width="87dp"
         android:layout_height="34dp"
-        android:layout_marginTop="80dp"
         android:text="103.11"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTipTotal"
         app:layout_constraintStart_toStartOf="@+id/tvTipAmount"
-        app:layout_constraintTop_toBottomOf="@+id/tvTipAmount" />
+        app:layout_constraintTop_toTopOf="@+id/tvTipTotal" />
 </androidx.constraintlayout.widget.ConstraintLayout>
